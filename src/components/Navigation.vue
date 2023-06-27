@@ -78,6 +78,7 @@ const {Navigation} = storeToRefs(useMain())
         }
 
         .icon {
+          margin: 0 9px 0 0;
           filter: invert(55%) sepia(18%) saturate(249%) hue-rotate(169deg) brightness(91%) contrast(90%);
         }
 
@@ -152,7 +153,7 @@ const {Navigation} = storeToRefs(useMain())
     display: flex;
     align-items: center;
     padding: 15px 0 0;
-    border-bottom: 1px solid @gray;  .trs(0.3s);
+    border-bottom: 1px solid @gray;
     @media @lg {
       flex-direction: column;
       border-bottom: none;
