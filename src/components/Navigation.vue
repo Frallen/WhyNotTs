@@ -30,6 +30,10 @@
         </router-link>
       </div>
     </div>
+    <div class="geo geo-bottom" v-show="isMobile">
+        <div class="icon"><img src="/images/Geo.svg" alt="logo"></div>
+        Москва и область
+    </div>
   </div>
 </template>
 
@@ -43,6 +47,23 @@ const {Navigation} = storeToRefs(useMain())
 .navbar {
   &-bg {
     background: @black;
+  }
+
+  .geo-bottom {
+    display: none;
+    @media @lg {
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      background: #F3F5F6;
+      color: @bold_gray;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      .icon {
+      }
+    }
   }
 
   &-header {
@@ -207,6 +228,7 @@ const {Navigation} = storeToRefs(useMain())
   height: 100%;
   width: 100%;
   z-index: 999;
+
   .navbar-menu {
     height: 100%;
     opacity: 1;
